@@ -20,7 +20,12 @@ const staticFilesPath = path.join(__dirname, '../public');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(staticFilesPath));
-app.use(cors());
+const corsOptions = {
+    origin: "http://localhost:3000",  // Allow only frontend origin
+    credentials: true,  // Allow cookies and authorization headers
+};
+app.use(cors(corsOptions));
+
 
 app.use('/api', router);
 

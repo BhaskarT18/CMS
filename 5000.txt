@@ -1,0 +1,30 @@
+5000
+
+
+get {{url}}/dashboard/dashboardCount
+gt {{url}}/dashboard/dashboardGetTodaysPayment
+{{url}}/dashboard/dashboardGetTodaysAdmission
+
+
+
+
+student 
+get
+{{url}}/students/list
+
+post
+{{url}}/students/save
+get
+{{url}}/students/get/2
+
+get
+{{url}}/students/view/2
+
+post
+{{url}}/students/delete/1
+
+post 
+{{url}}/students/assignCourse
+
+
+
